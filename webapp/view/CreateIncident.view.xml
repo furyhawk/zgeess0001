@@ -1,0 +1,82 @@
+<mvc:View controllerName="zgeess0001.controller.CreateIncident" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:core="sap.ui.core">
+	<semantic:SemanticPage busy="{createView>/busy}" title="Create an incident report" titleLevel="H1" 
+		busyIndicatorDelay="{createView>/delay}">
+		<!--<semantic:titleHeading>-->
+			<!--<Title text="Create an incident report"/>-->
+		<!--</semantic:titleHeading>-->
+		<semantic:content>
+			<VBox>
+				<Panel headerText="Key Information" expanded="true" expandable="true">
+					<!--{htmlText}-->
+					<FormattedText htmlText="{html>/htmlText}"/>
+					<!--<VBox>-->
+					<!--	<Title text="A incident qualifies to be a Service Injury only if a person is:"/>-->
+					<!--	<Text text="(a) Injured by an accident arising out of and in the course of employment."/>-->
+					<!--	<Text text="(b) Injured while on an overseas assignment."/>-->
+					<!--	<Text text="(c) Contracted an Occupational Disease."/>-->
+					<!--	<Text text="(d) Contracted a disease from exposure to biological or chemical agents at work."/>-->
+					<!--	<Title text="Claim can be submitted under WICA or IM2J. The features are:"/>-->
+					<!--	<Title text="WICA"/>-->
+					<!--	<Text text=""/>-->
+					<!--	<Title text="IM2J"/>-->
+					<!--	<Text text=""/>-->
+					<!--<Title level="H1" text="Report Details"/>-->
+					<!--<ObjectHeader title="Report Details"/>-->
+					<!--</VBox>-->
+				</Panel>
+				<Panel headerText="Report Details" expanded="true" expandable="false">
+					<HBox>
+						<!--<Bar>-->
+						<!--	<contentLeft>-->
+						<VBox>
+							<Label text="Claim Type" labelFor="rbgClaimType"/>
+							<RadioButtonGroup id="rbgClaimType" columns="2" class="sapUiMediumMarginBottom">
+								<buttons>
+									<RadioButton text="IM2J"/>
+									<RadioButton text="WICA"/>
+								</buttons>
+							</RadioButtonGroup>
+						</VBox>
+						<!--</contentLeft>-->
+						<!--<contentMiddle>-->
+						<VBox class="sapUiLargeMarginBegin">
+							<Label text="Report Type" labelFor="cbReportType"/>
+							<ComboBox id="cbReportType" placeholder="Select the report type">
+								<core:Item text="Work-related accident"/>
+								<core:Item text="Occupational Disease"/>
+								<core:Item text="Oversea accident"/>
+							</ComboBox>
+						</VBox>
+						<!--	</contentMiddle>-->
+						<!--</Bar>-->
+					</HBox>
+				</Panel>
+			</VBox>
+		</semantic:content>
+		<semantic:customFooterContent>
+			<Bar>
+					<contentLeft>
+						<Button text="SAVE AS DRAFT" icon="sap-icon://save" press="onCancel2"/>
+					</contentLeft>
+				<contentRight>
+					<!--<Button id="edit" text="Edit" enabled="false" press="handleEditPress"/>-->
+					<!--<Button id="save" text="Save" type="Emphasized" visible="false" press="handleSavePress"/>-->
+					<!--<Button id="cancel" text="Cancel" visible="false" press="handleCancelPress"/>-->
+					<!--<Button id="submit" text="Submit" press="onSubmit" type="Emphasized"/>-->
+					<Button text="CANCEL" press="onCancel2"/>
+					<Button text="NEXT" press="onApprove" type="Transparent"/>
+				</contentRight>
+			</Bar>
+		</semantic:customFooterContent>
+		<!--<semantic:sendEmailAction>-->
+		<!--	<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>-->
+		<!--</semantic:sendEmailAction>-->
+		<!--<semantic:shareInJamAction>-->
+		<!--	<semantic:ShareInJamAction id="shareInJam" visible="{FLP>/isShareInJamActive}" press="onShareInJamPress"/>-->
+		<!--</semantic:shareInJamAction>-->
+		<!--<semantic:saveAsTileAction>-->
+		<!--	<footerbar:AddBookmarkButton id ="shareTile" title="{objectView>/saveAsTileTitle}" />-->
+		<!--</semantic:saveAsTileAction>-->
+	</semantic:SemanticPage>
+</mvc:View>

@@ -1,0 +1,93 @@
+<mvc:View controllerName="zgeess0001.controller.Worklist" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:core="sap.ui.core">
+	<semantic:SemanticPage showFooter="false">
+		<!--<semantic:titleHeading>-->
+		<!--	<Title text="{i18n>worklistTitle}"/>-->
+		<!--</semantic:titleHeading>-->
+		<!--<subHeader>-->
+		<!--	<Bar>-->
+		<!--		<contentMiddle>-->
+		<!--			<Title text="{i18n>worklistTitle}" level="H1"></Title>-->
+		<!--		</contentMiddle>-->
+		<!--	</Bar>-->
+		<!--</subHeader>-->
+		<semantic:content>
+			<VBox>
+			<ObjectHeader title="{i18n>worklistTitle}"
+							responsive="true"/>
+			<!--<Title text="{i18n>worklistTitle}"/>-->
+			<Table id="tbWorklist" width="auto" items="{ path: '/CtrlDataSet', sorter: { path: 'RefNo', descending: false } }"
+				class="sapUiResponsiveMargin sapUiMediumMarginTop" noDataText="{worklistView>/tableNoDataText}"
+				busyIndicatorDelay="{worklistView>/tableBusyDelay}" growing="true" growingScrollToLoad="true" updateFinished="onUpdateFinished">
+				<headerToolbar>
+					<Toolbar>
+						<!--<Title id="tableHeader" text="{worklistView>/worklistTableTitle}"/>-->
+						<SearchField id="searchField" tooltip="{i18n>worklistSearchTooltip}" search="onSearch" width="auto"></SearchField>
+						<ComboBox placeholder="Filter by">
+							<core:Item text="MIN/DEPT ACTION"/>
+							<core:Item text="POLICE FORCE ACT"/>
+							<core:Item text="PSC (DIRECTIONS)"/>
+							<core:Item text="PSC (DIRECTIONS)(PRISONS)"/>
+							<core:Item text="PSC REGULATION 3"/>
+							<core:Item text="PSC REGULATION 4"/>
+							<core:Item text="PSC REGULATION 9"/>
+						</ComboBox>
+						<ToolbarSpacer/>
+						<Button icon="sap-icon://write-new-document" text="CREATE NEW" type="Emphasized" press="onCreate"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column>
+						<Label text="{i18n>tableNameColumnTitle}" id="nameColumnTitle" class="sapUiResponsiveMargin"/>
+					</Column>
+					<Column>
+						<Label text="Injured Employee" class="sapUiResponsiveMargin"/>
+					</Column>
+					<Column>
+						<Label text="Date of Injury" class="sapUiResponsiveMargin"/>
+					</Column>
+					<Column>
+						<Label text="Claim Amount" textAlign="Begin" class="sapUiResponsiveMargin"/>
+					</Column>
+					<Column>
+						<Label text="Status" class="sapUiResponsiveMargin"/>
+					</Column>
+					<Column>
+						<Label text="" class="sapUiResponsiveMargin"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Active" press="onPress">
+						<cells>
+							<ObjectIdentifier text="{path: 'RefNo', formatter: '.formatter.formatAlpha'}" class="sapUiResponsiveMargin"/>
+							<ObjectIdentifier text="{Uname}" class="sapUiResponsiveMargin"/>
+							<Text text="{path: 'DateOfInjury', formatter: '.formatter.formatDate'}" class="sapUiResponsiveMargin"/>
+							<!--<Text text="{ path: 'DateOfInjury', type: 'sap.ui.model.type.Date', formatOptions: { pattern: 'dd/MM/yyyy' }"/>-->
+							<!--<DatePicker dateValue="{DateOfInjury}" displayFormat="dd/MM/yyyy" change="onDateChange" fieldGroupIds="fgDate"/>-->
+							<ObjectNumber
+								number="{ parts:[{path:'ClaimAmount'},{path:'CurrencyCode'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }"
+								unit="{CurrencyCode}" textDirection="LTR" textAlign="Left" class="sapUiResponsiveMargin"/>
+							<!--<HBox direction="Row"><Text text="SGD"/><ObjectIdentifier text="{ClaimAmount}"/></HBox>-->
+							<ObjectIdentifier text="{Status}" class="sapUiResponsiveMargin"/>
+							<HBox direction="Row">
+								<Button icon="sap-icon://delete" press="onViewActionPress"/>
+								<Button icon="sap-icon://download" press="onViewActionPress"/>
+								<Button icon="sap-icon://edit" press="onViewActionPress"/>
+							</HBox>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			</VBox>
+		</semantic:content>
+		<!--<semantic:sendEmailAction>-->
+		<!--	<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>-->
+		<!--</semantic:sendEmailAction>-->
+		<!--<semantic:shareInJamAction>-->
+		<!--	<semantic:ShareInJamAction id="shareInJam" visible="{FLP>/isShareInJamActive}" press="onShareInJamPress"/>-->
+		<!--</semantic:shareInJamAction>-->
+		<!--<semantic:saveAsTileAction>-->
+		<!--	<footerbar:AddBookmarkButton id="shareTile" title="{worklistView>/saveAsTileTitle}"/>-->
+		<!--</semantic:saveAsTileAction>-->
+	</semantic:SemanticPage>
+</mvc:View>

@@ -1,0 +1,111 @@
+[{
+	"RefNo": "00000001",
+	"Uname": "John Chu",
+	"DateOfInjury": "/Date(1374768000000)/",
+	"CurrencyCode": "SGD",
+	"ClaimAmount": 2642.19,
+	"Status": "01. Draft",
+	"__metadata": {
+		"uri": "CtrlDataSet('RefNo%201')",
+		"type": "ZHRPDGS0005_SRV.CtrlData"
+	}
+}, {
+	"RefNo": "00000002",
+	"Uname": "Ng Chee Kiat",
+	"DateOfInjury": "/Date(1333382400000)/",
+	"CurrencyCode": "SGD",
+	"ClaimAmount": 3770.02,
+	"Status": "02. Pending Confirmation",
+	"__metadata": {
+		"uri": "CtrlDataSet('RefNo%202')",
+		"type": "ZHRPDGS0005_SRV.CtrlData"
+	}
+}, {
+	"RefNo": "00000003",
+	"Uname": "Julian Chia",
+	"DateOfInjury": "/Date(1163174400000)/",
+	"CurrencyCode": "SGD",
+	"ClaimAmount": 4360.82,
+	"Status": "02. Pending Confirmation",
+	"__metadata": {
+		"uri": "CtrlDataSet('RefNo%203')",
+		"type": "ZHRPDGS0005_SRV.CtrlData"
+	}
+}, {
+	"RefNo": "00000004",
+	"Uname": "Uname 4",
+	"DateOfInjury": "/Date(1561132800000)/",
+	"CurrencyCode": "SGD",
+	"ClaimAmount": 2288.85,
+	"Status": "03. Approve",
+	"__metadata": {
+		"uri": "CtrlDataSet('RefNo%204')",
+		"type": "ZHRPDGS0005_SRV.CtrlData"
+	}
+}, {
+	"RefNo": "00000005",
+	"Uname": "Uname 5",
+	"DateOfInjury": "/Date(1231344000000)/",
+	"CurrencyCode": "SGD",
+	"ClaimAmount": 135.43,
+	"Status": "04. Rejected",
+	"__metadata": {
+		"uri": "CtrlDataSet('RefNo%205')",
+		"type": "ZHRPDGS0005_SRV.CtrlData"
+	}
+}, {
+	"RefNo": "00000006",
+	"Uname": "Uname 6",
+	"DateOfInjury": "/Date(1498665600000)/",
+	"CurrencyCode": "SGD",
+	"ClaimAmount": 9020.9,
+	"Status": "05. Pending MOM's Assessment",
+	"__metadata": {
+		"uri": "CtrlDataSet('RefNo%206')",
+		"type": "ZHRPDGS0005_SRV.CtrlData"
+	}
+}, {
+	"RefNo": "00000007",
+	"Uname": "Uname 7",
+	"DateOfInjury": "/Date(1274112000000)/",
+	"CurrencyCode": "SGD",
+	"ClaimAmount": 4811.85,
+	"Status": "08. Close",
+	"__metadata": {
+		"uri": "CtrlDataSet('RefNo%207')",
+		"type": "ZHRPDGS0005_SRV.CtrlData"
+	}
+}, {
+	"RefNo": "00000008",
+	"Uname": "Uname 8",
+	"DateOfInjury": "/Date(1249228800000)/",
+	"CurrencyCode": "SGD",
+	"ClaimAmount": 9553.11,
+	"Status": "08. Close",
+	"__metadata": {
+		"uri": "CtrlDataSet('RefNo%208')",
+		"type": "ZHRPDGS0005_SRV.CtrlData"
+	}
+}, {
+	"RefNo": "00000009",
+	"Uname": "Uname 9",
+	"DateOfInjury": "/Date(1105113600000)/",
+	"CurrencyCode": "SGD",
+	"ClaimAmount": 7208.8,
+	"Status": "08. Close",
+	"__metadata": {
+		"uri": "CtrlDataSet('RefNo%209')",
+		"type": "ZHRPDGS0005_SRV.CtrlData"
+	}
+}, {
+	"RefNo": "00000010",
+	"Uname": "Uname 10",
+	"DateOfInjury": "/Date(1183478400000)/",
+	"CurrencyCode": "SGD",
+	"ClaimAmount": 4640.97,
+	"Status": "08. Close",
+	"__metadata": {
+		"uri": "CtrlDataSet('RefNo%2010')",
+		"type": "ZHRPDGS0005_SRV.CtrlData"
+	}
+}]
